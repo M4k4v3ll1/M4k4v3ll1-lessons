@@ -1,12 +1,7 @@
-.nav {
-    grid-area: n;
-    background-color: burlywood;
+.postsBlock {
+    padding: 10px;
 }
 
-.item {
-    color: white
-}
-
-.active {
-    font-size: 50px;
+.posts {
+    margin-top: 10px;
 }
