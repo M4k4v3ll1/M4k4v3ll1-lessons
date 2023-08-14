@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './ProfileInfo.module.css'
+import s from './ProfileInfo.module.css'
 
 const ProfileInfo = (props) => {
     return (
@@ -8,7 +8,7 @@ const ProfileInfo = (props) => {
                 <img
                     src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxXnC3fwMwkbIt3ejGRIw3NmbDyUtgS5g2jA&usqp=CAU'/>
             </div>
-            <div className={classes.descriptionBlock}>
+            <div className={s.descriptionBlock}>
                 ava + description
             </div>
         </div>

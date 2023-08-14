@@ -1,9 +1,18 @@
 import React from 'react';
-import classes from './MyPosts.module.css'
+import s from './MyPosts.module.css'
 import Post from './Post/Post';
 
 const MyPosts = (props) => {
-    return (<div className={classes.postsBlock}>
+
+    let posts = [
+        {id: 1, message: "Hi, how are you", likesCount: 15},
+        {id: 2, message: "It\'s my first post", likesCount: 20}
+    ]
+
+    let postsElement = posts
+        .map(p => <Post message={p.message} likesCount={p.likesCount}/>);
+
+    return (<div className={s.postsBlock}>
         <h3>{props.name}</h3>
         <div>
             <textarea placeholder="Что нового?"></textarea>
@@ -11,11 +20,8 @@ const MyPosts = (props) => {
         <div>
             <button>Добавить пост</button>
         </div>
-        <div className={classes.posts}>
-            <Post message='Hi, how are you' likesCounts='15'/>
-            <Post message="It's my first post" likesCounts='20'/>
-            <Post/>
-            <Post/>
+        <div className={s.posts}>
+            {postsElement}
         </div>
     </div>);
 }
