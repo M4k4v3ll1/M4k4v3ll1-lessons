@@ -10,14 +10,13 @@ const MyPosts = (props) => {
 
     let newPostElement = React.createRef();
 
-    let addPost = () => {
-        props.dispatch(addPostActionCreator());
+    let onAddPost = () => {
+        props.addPost();
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        let action = updateNewPostTextActionCreator(text);
-        props.dispatch(action);
+        props.updateNewPostText(text);
     }
 
     return (<div className={s.postsBlock}>
@@ -29,7 +28,7 @@ const MyPosts = (props) => {
                   value={props.newPostText}/>
         </div>
         <div>
-            <button onClick={addPost}>Добавить пост</button>
+            <button onClick={onAddPost}>Добавить пост</button>
         </div>
         <div className={s.posts}>
             {postsElement}
