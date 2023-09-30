@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+import Users from "./components/Users/Users";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
@@ -18,6 +19,7 @@ const App = (props) => {
                 <Routes>
                     <Route path="/dialogs/*" element={<DialogsContainer/>}></Route>
                     <Route path="/profile" element={<Profile/>}></Route>
+                    <Route path="/users" element={<UsersContainer/>}></Route>
                     <Route path="/news" element={<News/>}></Route>
                     <Route path="/music" element={<Music/>}></Route>
                     <Route path="/settings" element={<Settings/>}></Route>
